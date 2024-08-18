@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Course</title>
+    
+    <style>
+        body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #1e1e2d;
+    color: #ffffff;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 240px;
+    background-color: #21212d;
+    padding: 20px 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 20px;
+}
+
+.sidebar ul li a {
+    color: #d4af37;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.sidebar ul li a .icon {
+    margin-right: 10px;
+}
+
+.sidebar ul li a:hover, .sidebar ul li a.active {
+    background-color: #33334d;
+    border-left: 4px solid #d4af37;
+}
+
+.profile-content {
+    flex: 1;
+    padding: 40px;
+    background-color: #15151f;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.steps {
+    display: flex;
+    gap: 10px;
+}
+
+.step {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #333;
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.step.active {
+    background-color: #dab324;
+}
+
+.course-form .form-group {
+    margin-bottom: 20px;
+}
+
+.course-form .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #dab324;
+}
+
+.course-form .form-group input,
+.course-form .form-group textarea {
+    width: 30%;
+    padding: 10px;
+    background-color: #2a2a2a;
+    border: none;
+    color: #e0e0e0;
+    border-radius: 5px;
+}
+
+.upload-tips {
+    width: 300px;
+    padding: 30px;
+    background-color: #1e1e1e;
+    box-sizing: border-box;
+}
+
+.upload-tips h2 {
+    margin-top: 0;
+    color: #dab324;
+}
+
+.upload-tips ul {
+    padding-left: 20px;
+}
+
+.upload-tips ul li {
+    margin-bottom: 10px;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <ul>
+                <li><a href="myprofil.html" class="active"><i class="icon">👤</i> My Profile</a></li>
+                <!-- <li><a href="#"><i class="icon">📊</i> Dashboard</a></li> -->
+                <li><a href="mycourse.html"><i class="icon">📚</i> My Courses</a></li>
+                <li><a href="#"><i class="icon">➕</i> Add Course</a></li>
+                <li><a href="#"><i class="icon">⚙️</i> Settings</a></li>
+                <li><a href="#"><i class="icon">🚪</i> Logout</a></li>
+            </ul>
+        </aside>
+        <main class="profile-content">
+            <h1>Add Course</h1>
+            <div class="steps">
+                <span class="step active">1</span>
+                <span class="step">2</span>
+                <span class="step">3</span>
+            </div>
+            <form class="course-form">
+                <div class="form-group">
+                    <label for="courseTitle">Course Title *</label>
+                    <input type="text" id="courseTitle" placeholder="Enter Course Title">
+                </div>
+                <div class="form-group">
+                    <label for="courseDescription">Course Short Description *</label>
+                    <textarea id="courseDescription" placeholder="Enter Description"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="coursePrice">Course Price *</label>
+                    <input type="text" id="coursePrice" placeholder="Enter Course Price">
+                </div>
+              
+                <div class="form-group">
+                    <label for="courseCategory">Course Category *</label>
+                    <select id="courseCategory">
+                        <option value="" disabled selected>Choose a Category</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="courseTags">Tags *</label>
+                    <input type="text" id="courseTags" placeholder="Enter Tags and press Enter">
+                </div>
+                <div class="form-group">
+                    <label for="courseThumbnail">Course Thumbnail *</label>
+                    <div id="courseThumbnail" class="thumbnail-upload">
+                        <p>Drag and drop an image, or<br>click to browse a file</p>
+                        <p>Aspect ratio 16:9 • Recommended size 1024×576</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="courseBenefits">Benefits of the course *</label>
+                    <textarea id="courseBenefits" placeholder="Enter benefits of the course"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="courseRequirements">Requirements/Instructions *</label>
+                    <textarea id="courseRequirements"></textarea>
+                </div>
+                <button type="submit" class="next-button">Next</button>
+            </form>
+            <!-- <div class="upload-tips">
+                <h2>Course Upload Tips</h2>
+                <ul>
+                    <li>Set the Course Price option or make it free.</li>
+                    <li>Standard size for the course thumbnail is 1024×576.</li>
+                    <li>Video section controls the course overview video.</li>
+                    <li>Course Builder is where you create & organize a course.</li>
+                    <li>Add Topics in the Course Builder section to create lessons, quizzes, and assignments.</li>
+                    <li>Information from the Additional Data section shows up on the course single page.</li>
+                    <li>Make Announcements to notify any important updates.</li>
+                    <li>Notes to all enrolled students at once.</li>
+                </ul>
+            </div> -->
+            </section>
+           
+        </main>
+    </div>
+    <script>
+     
+</script>
+</body>
+</html>
+
+

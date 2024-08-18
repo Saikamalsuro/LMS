@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Image Example</title>
+    <style>
+        body {
+            background-image: url('1723719597348.jpg');
+            background-size: cover; /* Make the image cover the entire area */
+            background-repeat: no-repeat; /* Prevent the image from repeating */
+            background-position: center center; /* Center the image horizontally and vertically */
+            height: 100vh; /* Ensure the body takes the full viewport height */
+            margin: 0; /* Remove any default margin */
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+            padding: 0 5%;
+            color: #fff; /* Text color to stand out against the background */
+        }
+
+        .text-content {
+            max-width: 50%;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #2314ab; /* Make the text color white to contrast with the background */
+        }
+
+        .highlight {
+            color: black;
+            font-weight: bold;
+        }
+
+        .highlight-alt {
+            color: #ff5b5b;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 18px;
+            color: #673c3c;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+
+        .register-btn {
+            background: #ff5b5b;
+            color: #fff;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 18px;
+        }
+
+        .image-content {
+            position: relative;
+        }
+
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 91, 91, 0.2);
+            animation: move 20s infinite ease-in-out;
+        }
+
+        @keyframes move {
+            0%, 100% { transform: translateY(0) translateX(0); }
+            50% { transform: translateY(-20px) translateX(20px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text-content">
+            <h1>Welcome To <span class="highlight">Urstudy</span><span class="highlight-alt">mate</span></h1>
+            <p>With millions of students globally, we are the first of its kind online portal for school<br> children in providing supporting materials for students appearing for the board examinations.</p>
+            <a href="#" class="register-btn">Register Now!</a>
+        </div>
+        <div class="image-content">
+            <!-- Additional content can go here -->
+        </div>
+    </div>
+</body>
+</html>

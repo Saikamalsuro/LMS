@@ -1,0 +1,160 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, rgb(248, 123, 123), #eae7ed);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    height: 55%;
+}
+
+/* Header Styles */
+header {
+    margin-bottom: 2rem;
+}
+
+.logo {
+    max-width: 150px;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #4A90E2;
+}
+
+/* Sign-In Form Styles */
+.signin-form h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+}
+
+.options label {
+    display: flex;
+    align-items: center;
+}
+
+.forgot-password {
+    color: #4A90E2;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.signin-button {
+    background-color: rgb(247, 64, 64);
+    color: #fff;
+    border: none;
+    padding: 0.75rem;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.signin-button:hover {
+    background-color: #f67979;
+}
+
+/* Social Sign-In Styles */
+.social-signin {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.social-signin button {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.google-btn {
+    background-color: #DB4437;
+    color: #fff;
+}
+
+.facebook-btn {
+    background-color: #3B5998;
+    color: #fff;
+}
+
+.linkedin-btn {
+    background-color: #0077B5;
+    color: #fff;
+}
+
+.social-signin button:hover {
+    opacity: 0.9;
+}
+
+/* Sign-Up Link */
+.signup-link {
+    margin-top: 1rem;
+    font-size: 0.875rem;
+}
+
+.signup-link a {
+    color: #4A90E2;
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styles */
+footer {
+    margin-top: 2rem;
+    font-size: 0.875rem;
+    color: #888;
+}
+
+footer a {
+    color: #4A90E2;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+signin-image
+}

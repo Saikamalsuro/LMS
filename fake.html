@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Creation Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, rgb(248, 123, 123), #eae7ed);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            /* background-color: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 350px; */
+
+            background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    height: 85%;
+        }
+        .toggle-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 25px;
+        }
+        .toggle-button {
+            padding: 10px 25px;
+            border: none;
+            border-radius: 25px;
+            background-color: #f0f0f0;
+            color: #555;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .toggle-button.active {
+            background-color: #ff4747;
+            color: #ffffff;
+        }
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 12px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            color: #333;
+            box-sizing: border-box;
+        }
+        .create-button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 25px;
+            border: none;
+            border-radius: 5px;
+            background-color: #ff4747;
+            color: #ffffff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .create-button:hover {
+            background-color: #e63939;
+        }
+        .container h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+    
+}
+.logo {
+    max-width: 150px;
+    margin-bottom: 1rem;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="logo.jpg" alt="LMS Logo" class="logo">
+            <h2 style="color: red;">Your Learning Journey Starts Here</h2>
+        </header>
+        <h3>Welcome Back!</h3>
+        <div class="toggle-buttons">
+            <button class="toggle-button active" onclick="toggleForm('student')">Student</button>
+            <button class="toggle-button" onclick="toggleForm('instructor')">Instructor</button>
+        </div>
+        <form id="studentForm">
+            <input type="text" placeholder="Enter first name" required>
+            <input type="text" placeholder="Enter last name" required>
+            <input type="email" placeholder="Enter email address" required>
+            <input type="password" placeholder="Enter Password" required>
+            <input type="password" placeholder="Confirm Password" required>
+            <button class="create-button" type="submit">Create Account</button>
+        </form>
+        <form id="instructorForm" style="display: none;">
+            <input type="text" placeholder="Enter first name " required>
+            <input type="text" placeholder="Enter last name" required>
+            <input type="email" placeholder="Enter email address" required>
+            <input type="password" placeholder="Enter Password" required>
+            <input type="password" placeholder="Confirm Password" required>
+            <button class="create-button" type="submit">Create Account</button>
+        </form>
+    </div>
+
+    <script>
+        function toggleForm(formType) {
+            const studentForm = document.getElementById('studentForm');
+            const instructorForm = document.getElementById('instructorForm');
+            const buttons = document.querySelectorAll('.toggle-button');
+
+            if (formType === 'student') {
+                studentForm.style.display = 'block';
+                instructorForm.style.display = 'none';
+                buttons[0].classList.add('active');
+                buttons[1].classList.remove('active');
+            } else {
+                studentForm.style.display = 'none';
+                instructorForm.style.display = 'block';
+                buttons[0].classList.remove('active');
+                buttons[1].classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>

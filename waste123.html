@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Course</title>
+    <style>
+        body {
+    display: flex;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #181818;
+    color: #e0e0e0;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #1e1e1e;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+}
+
+.sidebar ul li a.active {
+    color: #dab324;
+}
+
+.settings {
+    position: absolute;
+    bottom: 20px;
+}
+
+.settings a {
+    color: #e0e0e0;
+    text-decoration: none;
+    display: block;
+    margin: 10px 0;
+}
+
+.content {
+    flex: 1;
+    padding: 30px;
+    background-color: #121212;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.steps {
+    display: flex;
+    gap: 10px;
+}
+
+.step {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #333;
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.step.active {
+    background-color: #dab324;
+}
+
+.course-form .form-group {
+    margin-bottom: 20px;
+}
+
+.course-form .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #dab324;
+}
+
+.course-form .form-group input,
+.course-form .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: #2a2a2a;
+    border: none;
+    color: #e0e0e0;
+    border-radius: 5px;
+}
+
+.upload-tips {
+    width: 300px;
+    padding: 30px;
+    background-color: #1e1e1e;
+    box-sizing: border-box;
+}
+
+.upload-tips h2 {
+    margin-top: 0;
+    color: #dab324;
+}
+
+.upload-tips ul {
+    padding-left: 20px;
+}
+
+.upload-tips ul li {
+    margin-bottom: 10px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <ul>
+            <li><a href="#">My Profile</a></li>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">My Courses</a></li>
+            <li><a href="#" class="active">+ Add Course</a></li>
+        </ul>
+        <div class="settings">
+            <a href="#">Settings</a>
+            <a href="#">Logout</a>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="header">
+            <h1>Add Course</h1>
+            <div class="steps">
+                <span class="step active">1</span>
+                <span class="step">2</span>
+                <span class="step">3</span>
+            </div>
+            
+        </div>
+        <form class="course-form">
+            <div class="form-group">
+                <label for="courseTitle">Course Title</label>
+                <input type="text" id="courseTitle" placeholder="Enter Course Title">
+            </div>
+            <div class="form-group">
+                <label for="courseDescription">Course Short Description</label>
+                <textarea id="courseDescription" placeholder="Enter Description"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="coursePrice">Course Price</label>
+                <input type="text" id="coursePrice" placeholder="Enter Course Price">
+            </div>
+            <div class="form-group">
+                <label for="courseTitle">Course Title</label>
+                <input type="text" id="courseTitle" placeholder="Enter Course Title">
+            </div>
+            <div class="form-group">
+                <label for="courseDescription">Course Short Description</label>
+                <textarea id="courseDescription" placeholder="Enter Description"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="coursePrice">Course Price</label>
+                <input type="text" id="coursePrice" placeholder="Enter Course Price">
+            </div>
+        </form>
+    </div>
+
+    <div class="upload-tips">
+        <h2>Course Upload Tips</h2>
+        <ul>
+            <li>Set the Course Price option or make it free.</li>
+            <li>Standard size for the course thumbnail is 1024×576.</li>
+            <li>Video section controls the course overview video.</li>
+            <li>Course Builder is where you create & organize a course.</li>
+            <li>Add Topics in the Course Builder section to create lessons, quizzes, and assignments.</li>
+            <li>Information from the Additional Data section shows up on the course single page.</li>
+            <li>Make Announcements to notify any important updates.</li>
+            <li>Notes to all enrolled students at once.</li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

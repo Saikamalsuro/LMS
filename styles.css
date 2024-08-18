@@ -1,0 +1,125 @@
+body {
+    background: linear-gradient(135deg, rgb(248, 123, 123), #eae7ed);
+    font-family: Arial, sans-serif;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+color: black;
+}
+
+.toggle-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.toggle-buttons button {
+    background-color: red;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    color: #fff;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.toggle-buttons button.active,
+.toggle-buttons button:hover {
+    background-color: red;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    position: relative;
+    padding-right: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.input-group label span {
+    color: #ff4d4d;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    background-color: #fb8f8f;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.input-group .toggle-password {
+    position: absolute;
+    top: 35px;
+    right: 10px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.create-account-btn {
+    background-color: red;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    color: #000;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color: white;
+}
+
+.create-account-btn:hover {
+    background-color: #f18888;
+}
+
+
+/* Animation for form switching */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+}
+
+.form-active {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+.form-inactive {
+    display: none;
+    animation: fadeOut 0.3s ease-in-out forwards;
+}

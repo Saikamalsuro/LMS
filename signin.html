@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS Sign In</title>
+    <link rel="stylesheet" href="signin.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="logo.jpg" alt="LMS Logo" class="logo">
+            <h2 style="color: red;">Your Learning Journey Starts Here</h2>
+        </header>
+        
+        <div class="main-content">
+            <main class="signin-form">
+                <h3>Welcome Back!</h3>
+                <form action="/signin" method="POST">
+                    <input type="email" name="email" placeholder="Email Address" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <div class="options">
+                        <label><input type="checkbox" name="remember"> Remember Me</label>
+                        <a href="/forgot-password" class="forgot-password">Forgot Password?</a>
+                    </div>
+                    <button type="submit" class="signin-button">Sign In</button>
+                </form>
+            </main>
+
+            
+        </div>
+        
+        <!-- <footer>
+            <p>Need Help? <a href="/help">Visit our Help Center</a></p>
+            <p>Contact us at <a href="mailto:support@lms.com">support@lms.com</a></p>
+        </footer> -->
+    </div>
+    <div>
+        <aside class="signin-image">
+            <img src="https://img.freepik.com/free-vector/forgot-password-concept-illustration_114360-1010.jpg?t=st=1723475257~exp=1723478857~hmac=630a01f7944ad2bcc84eca6f08946bd91ed64d1be00a53968174255e7900ee74&w=740" alt="Sign In Vector">
+        </aside>
+    </div>
+</body>
+</html>
