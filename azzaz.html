@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+  <style>
+    body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f7fa;
+}
+
+.dashboard {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 25%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+}
+
+.subject h2 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.subject-options {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.option {
+    background-color: #3b82f6;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.progress-card {
+    background-color: #f1f5f9;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.card-button {
+    background-color: #3b82f6;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    width: 100%;
+}
+
+.topic h3 {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.main-content {
+    width: 75%;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.flashcard {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+}
+
+.prev-button, .next-button {
+    background-color: #3b82f6;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+  </style>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="sidebar">
+            <div class="subject">
+                <h2>Chemistry</h2>
+                <div class="subject-options">
+                    <button class="option">Flashcards</button>
+                    <button class="option">Guide</button>
+                    <button class="option">Videos</button>
+                    <button class="option">Exams</button>
+                </div>
+                <div class="progress-card">
+                    <p>485 Flashcards</p>
+                    <p>0 Studied</p>
+                </div>
+                <button class="card-button">CARD 1</button>
+            </div>
+            <div class="topic">
+                <h3>Stoichiometric relationships</h3>
+                <p>41 Flashcards</p>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="header">
+                <p>Intro to matter and chemical change</p>
+                <p>2/8</p>
+            </div>
+            <div class="flashcard">
+                <p>Compare and contrast compounds and mixtures in a table. Give one example each.</p>
+            </div>
+            <div class="controls">
+                <button class="prev-button">Previous</button>
+                <button class="next-button">Next</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

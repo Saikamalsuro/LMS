@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URSSTUDYMATE</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar .logo img {
+            max-height: 40px;
+        }
+
+        .navbar .nav-links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .navbar .nav-links li {
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            padding: 5px 10px;
+        }
+
+        .navbar .nav-links a:hover {
+            color: #007DEF;
+        }
+
+        .login-signup {
+            display: flex;
+            gap: 10px;
+        }
+
+        .login-signup a {
+            text-decoration: none;
+            color: #007DEF;
+            font-weight: bold;
+            padding: 5px 15px;
+            border: 2px solid #007DEF;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .login-signup a:hover {
+            background-color: #007DEF;
+            color: #fff;
+        }
+
+        .content {
+            display: flex;
+            padding: 20px;
+        }
+
+        .sidebar {
+            width: 25%;
+            padding-right: 20px;
+            max-height: 80vh;
+            overflow-y: auto;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar h2 {
+            font-size: 1.5em;
+            margin: 15px;
+        }
+
+        .emojis {
+            font-size: 1.5em;
+            padding: 10px 15px;
+        }
+
+        .section {
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+            cursor: pointer;
+        }
+
+        .subtopics {
+            display: none;
+            padding-left: 20px;
+            background-color: #f1f1f1;
+            border-left: 2px solid #007DEF;
+        }
+
+        .subtopics a {
+            display: block;
+            padding: 5px 0;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .subtopics a:hover {
+            color: #007DEF;
+        }
+
+        .main-content {
+            width: 75%;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-around;
+            padding: 15px 0;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .navigation .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        .navigation .nav-item img {
+            height: 40px;
+            width: 40px;
+            margin-bottom: 5px;
+        }
+
+        .main-content .carousel {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            background-color: #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        .carousel .arrow {
+            font-size: 2em;
+            cursor: pointer;
+        }
+
+        .carousel .dots {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 5px;
+        }
+
+        .carousel .dots span {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: #007DEF;
+            border-radius: 50%;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+
+            .sidebar,
+            .main-content {
+                width: 100%;
+            }
+
+            .carousel {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo-3.jpeg" alt="URSSTUDYMATE">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">Policy</a></li>
+        </ul>
+        <div class="login-signup">
+            <a href="#">Login</a>
+            <a href="#">Sign Up</a>
+        </div>
+    </nav>
+
+    <div class="content">
+        <div class="sidebar">
+            <h2>Chemistry</h2>
+            <div class="emojis">
+                😃 😊 😐
+            </div>
+
+            <div class="section" onclick="toggleSubtopics('mainConceptSubtopics')">
+                <span>Main Concept</span>
+                <img src="play-icon.png" alt="Play">
+            </div>
+            <div id="mainConceptSubtopics" class="subtopics">
+                <a href="#">Subtopic 1</a>
+                <a href="#">Subtopic 2</a>
+                <a href="#">Subtopic 3</a>
+            </div>
+
+            <div class="section" onclick="toggleSubtopics('chemicalBondingSubtopics')">
+                <span>Chemical Bonding</span>
+                <img src="play-icon.png" alt="Play">
+            </div>
+            <div id="chemicalBondingSubtopics" class="subtopics">
+                <a href="#">Subtopic 1</a>
+                <a href="#">Subtopic 2</a>
+                <a href="#">Subtopic 3</a>
+            </div>
+
+            <div class="section" onclick="toggleSubtopics('atomicStructureSubtopics')">
+                <span>Atomic Structure</span>
+                <img src="play-icon.png" alt="Play">
+            </div>
+            <div id="atomicStructureSubtopics" class="subtopics">
+                <a href="#">Subtopic 1</a>
+                <a href="#">Subtopic 2</a>
+                <a href="#">Subtopic 3</a>
+            </div>
+            <div class="section" onclick="toggleSubtopics('mainConceptSubtopics')">
+                <span>Main Concept</span>
+                <img src="play-icon.png" alt="Play">
+            </div>
+            <div id="mainConceptSubtopics" class="subtopics">
+                <a href="#">Subtopic 1</a>
+                <a href="#">Subtopic 2</a>
+                <a href="#">Subtopic 3</a>
+            </div>
+            <div class="section" onclick="toggleSubtopics('mainConceptSubtopics')">
+                <span>Main Concept</span>
+                <img src="play-icon.png" alt="Play">
+            </div>
+            <div id="mainConceptSubtopics" class="subtopics">
+                <a href="#">Subtopic 1</a>
+                <a href="#">Subtopic 2</a>
+                <a href="#">Subtopic 3</a>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="navigation">
+                <div class="nav-item">
+                    <img src="flashcard.png" alt="Flashcards">
+                    <span>Flashcards</span>
+                </div>
+                <div class="nav-item">
+                    <img src="book.png" alt="Guide">
+                    <span>Guide</span>
+                </div>
+                <div class="nav-item">
+                    <img src="video.png" alt="Videos">
+                    <span>Videos</span>
+                </div>
+                <div class="nav-item">
+                    <img src="exam.png" alt="Exams">
+                    <span>Exams</span>
+                </div>
+            </div>
+            <div class="carousel">
+                <span class="arrow">&#9664;</span>
+                <div class="dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <span class="arrow">&#9654;</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleSubtopics(id) {
+            var element = document.getElementById(id);
+            if (element.style.display === "block") {
+                element.style.display = "none";
+            } else {
+                element.style.display = "block";
+            }
+        }
+    </script>
+</body>
+
+</html>

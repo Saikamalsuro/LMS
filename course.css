@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 20px;
+}
+
+.subjects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 80px;
+    max-width: 1300px;
+    margin: 0 auto;
+    margin-top: 120px;
+}
+
+.subject-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 120px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.subject-card:hover {
+    transform: translateY(-10px);
+}
+
+.subject-card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.subject-card h3 {
+    font-size: 16px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.new-label {
+    display: inline-block;
+    font-size: 12px;
+    color: #e67e22;
+    background-color: #fef6e4;
+    padding: 3px 8px;
+    border-radius: 12px;    
+    margin-top: 5px;
+}
+
+.close-button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #e81111;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.close-button:hover {
+    transform: scale(1.2);
+}

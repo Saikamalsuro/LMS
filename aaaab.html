@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics Section</title>
+   <style>
+    body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.statistics-container {
+    display: flex;
+    justify-content: space-around;
+    background: linear-gradient(90deg, #004aad, #0c77f8);
+    padding: 20px 0;
+    color: white;
+}
+
+.stat-item {
+    text-align: center;
+    flex: 1;
+    padding: 0 20px;
+}
+
+.stat-item h2 {
+    font-size: 48px;
+    margin: 0;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.stat-item p {
+    font-size: 18px;
+    margin: 0;
+    border-top: 1px solid #fff;
+    padding-top: 10px;
+    opacity: 0.8;
+    position: relative;
+    top: -10px; /* Adjusting the position to make the line continuous */
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.stat-item {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.stat-item h2 {
+    animation: scaleUp 1.5s ease-in-out;
+}
+
+.stat-item p {
+    animation: fadeIn 2s ease-in-out;
+}
+/* Responsive styles */
+@media (max-width: 768px) {
+    .statistics-container {
+        flex-direction: column;
+    }
+
+    .stat-item h2 {
+        font-size: 1.8em;
+    }
+
+    .stat-item p {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 425px) {
+    .statistics-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .stat-item {
+        margin-bottom: 20px;
+    }
+
+    .stat-item h2 {
+        font-size: 1.6em;
+    }
+
+    .stat-item p {
+        font-size: 0.85em;
+    }
+}
+
+@media (max-width: 375px) {
+    .statistics-container {
+        padding: 8px;
+    }
+
+    .stat-item h2 {
+        font-size: 1.4em;
+    }
+
+    .stat-item p {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 320px) {
+    .statistics-container {
+        padding: 5px;
+    }
+
+    .stat-item h2 {
+        font-size: 1.2em;
+    }
+
+    .stat-item p {
+        font-size: 0.75em;
+    }
+}
+   </style>
+</head>
+<body>
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics Section</title>
+   <style>
+    body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.statistics-container {
+    display: flex;
+    justify-content: space-around;
+    background: linear-gradient(90deg, #004aad, #0c77f8);
+    padding: 20px 0;
+    color: white;
+}
+
+.stat-item {
+    text-align: center;
+    flex: 1;
+    padding: 0 20px;
+}
+
+.stat-item h2 {
+    font-size: 48px;
+    margin: 0;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.stat-item p {
+    font-size: 18px;
+    margin: 0;
+    border-top: 1px solid #fff;
+    padding-top: 10px;
+    opacity: 0.8;
+    position: relative;
+    top: -10px; /* Adjusting the position to make the line continuous */
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.stat-item {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.stat-item h2 {
+    animation: scaleUp 1.5s ease-in-out;
+}
+
+.stat-item p {
+    animation: fadeIn 2s ease-in-out;
+}
+/* Responsive styles */
+@media (max-width: 768px) {
+    .statistics-container {
+        flex-direction: column;
+    }
+
+    .stat-item h2 {
+        font-size: 1.8em;
+    }
+
+    .stat-item p {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 425px) {
+    .statistics-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .stat-item {
+        margin-bottom: 20px;
+    }
+
+    .stat-item h2 {
+        font-size: 1.6em;
+    }
+
+    .stat-item p {
+        font-size: 0.85em;
+    }
+}
+
+@media (max-width: 375px) {
+    .statistics-container {
+        padding: 8px;
+    }
+
+    .stat-item h2 {
+        font-size: 1.4em;
+    }
+
+    .stat-item p {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 320px) {
+    .statistics-container {
+        padding: 5px;
+    }
+
+    .stat-item h2 {
+        font-size: 1.2em;
+    }
+
+    .stat-item p {
+        font-size: 0.75em;
+    }
+}
+   </style>
+</head>
+<body>
+    <div class="statistics-container">
+        <div class="stat-item">
+            <h2>334</h2>
+            <p>All Subjects</p>
+        </div>
+        <div class="stat-item">
+            <h2>153</h2>
+            <p>Topical Worksheets</p>
+        </div>
+        <div class="stat-item">
+            <h2>87</h2>
+            <p>Teachers</p>
+        </div>
+        <div class="stat-item">
+            <h2>35</h2>
+            <p>Students</p>
+        </div>
+    </div>
+</body>
+</html>
+
+</body>
+</html>
